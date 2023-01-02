@@ -5,6 +5,8 @@ import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 public class OverViewPage {
     WebDriver driver;
 
@@ -17,7 +19,7 @@ public class OverViewPage {
     private By FinishText = new By.ByXPath("//android.view.ViewGroup[@content-desc=\"test-FINISH\"]/android.widget.TextView");
     public String getproductPrice()
 
-    {
+    {   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         return   driver.findElement(productPrice1).getText();
     }
     public String getproductName()
@@ -26,11 +28,12 @@ public class OverViewPage {
         return   driver.findElement(productName1).getText();
     }
     public SheckOutCompletedPage clickFinishBtn()
-    {
+    {   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.findElement(finishBtn).click();
         return new SheckOutCompletedPage (driver) ;
     }
     public OverViewPage ScrollDownToFinishBtn(){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         MobileActions.scrollDownToSpecificText("FINISH" , driver);
         return this;
     }

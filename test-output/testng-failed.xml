@@ -6,6 +6,7 @@
       <class name="Tests">
         <methods>
           <include name="TC05_testInValidLogin"/>
+          <include name="TC02_testAddToCart"/>
           <include name="TC04_testOnlineShopping"/>
           <include name="setupDevice"/>
           <include name="setUpTestData"/>

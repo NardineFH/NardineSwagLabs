@@ -24,39 +24,38 @@ public class ProductPage {
     public String getProductText()
 
     {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return   driver.findElement(ProductText).getText();
     }
 
     public ProductPage clickAddToCart()
-    {
+    {   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.findElement(AddToCartBtn).click();
         return new ProductPage(driver);
     }
     public CartPage clickCartPageBtn()
-    {
+    {   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.findElement(CartItemBtn_NotEmpty).click();
         return new CartPage(driver);
     }
 
     public String getproductPrice()
 
-    {
+    {   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         return   driver.findElement(productPrice).getText();
     }
     public String getproductName()
 
-    {
+    {   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return   driver.findElement(productName).getText();
     }
     public CartPage clickEmptyCartPageBtn()
-    {
+    {   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.findElement(CartItem_Empty).click();
         return new CartPage(driver);
-}
-    public ProductPage Wait(){
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        return this;
     }
+
     }
 
 

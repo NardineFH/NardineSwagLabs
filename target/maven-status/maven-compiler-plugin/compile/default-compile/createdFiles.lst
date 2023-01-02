@@ -1,0 +1,8 @@
+pages\OverViewPage.class
+Actions\PropertiesReader.class
+pages\ProductPage.class
+Actions\MobileActions.class
+pages\CartPage.class
+pages\HomePage.class
+pages\CheckOutPage.class
+pages\SheckOutCompletedPage.class
