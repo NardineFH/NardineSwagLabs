@@ -1,12 +1,12 @@
+import Actions.AllureReportHelp;
 import Actions.PropertiesReader;
+import Actions.Screenshot;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.stringtemplate.v4.ST;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.*;
 
 import java.io.IOException;
@@ -33,6 +33,10 @@ public class Tests {
     String FirstName;
     String LastName ;
     String ZipCode;
+    String deviceName;
+    String  platformName;
+    String  platformVersion;
+    String automationName;
 
 
    @BeforeClass
@@ -44,7 +48,10 @@ public class Tests {
        FirstName =PropertiesReader.getProperties(testDataFile,"FirstName");
        LastName=PropertiesReader.getProperties(testDataFile,"LastName");
        ZipCode=PropertiesReader.getProperties(testDataFile,"ZipCode");
-
+       deviceName=PropertiesReader.getProperties(testDataFile,"deviceName");
+       platformName=PropertiesReader.getProperties(testDataFile,"platformName");
+       platformVersion=PropertiesReader.getProperties(testDataFile,"platformVersion");
+       automationName=PropertiesReader.getProperties(testDataFile,"automationName");
 
 
    }
@@ -52,11 +59,11 @@ public class Tests {
     public void setupDevice() throws MalformedURLException {
         String AppName = System.getProperty("user.dir") + "\\src\\test\\resources\\TestDataFiles\\Android.SauceLabs.Mobile.Sample.app.2.2.0.apk";
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("platformName", "Android");
-        caps.setCapability("appium:deviceName", "Demo");
+        caps.setCapability("platformName", platformName);
+        caps.setCapability("appium:deviceName", deviceName);
         caps.setCapability("appium:app", AppName);
-        caps.setCapability("appium:platformVersion", "11");
-        caps.setCapability("appium:automationName", "UiAutomator2");
+        caps.setCapability("appium:platformVersion", platformVersion);
+        caps.setCapability("appium:automationName", automationName);
         caps.setCapability("appium:appWaitActivity","com.swaglabsmobileapp.MainActivity");
         driver = new AndroidDriver(new URL("http://localhost:4723/"), caps);
         homePage = new HomePage(driver);
@@ -120,7 +127,13 @@ public class Tests {
              .clickCheckOutBtn().setFirstName(FirstName).setLastName(LastName)
              .setzipcode(ZipCode).clickContinueBtn().getproductPrice();
         Assert.assertEquals(productPrice,"$29.99");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         String finishText = overViewPage.ScrollDownToFinishBtn().clickFinishBtn().getFinishedOrderText();
         Assert.assertEquals(finishText,"THANK YOU FOR YOU ORDER" );
 
-    }}
+    }
+    @AfterMethod
+    public void attachScreenshotAfterTest (){
+        AllureReportHelp.attachScreenshot(Screenshot.screenshot(driver));
+    }
+    }

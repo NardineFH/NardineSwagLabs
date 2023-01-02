@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Extent Reports - Powered by SHAFT_Engine</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 2, 2023 06:31:51 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 2, 2023 07:48:52 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 2, 2023 06:31:51 PM</h3>
+<h3>Jan 2, 2023 07:48:52 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 2, 2023 06:36:52 PM</h3>
+<h3>Jan 2, 2023 07:51:18 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -84,7 +84,7 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>2</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -105,8 +105,8 @@
 </small>
 </div>
 <div>
-<small data-tooltip='40%'><b>2</b> tests failed,
-<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='20%'><b>1</b> tests failed,
+<b>1</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -125,8 +125,8 @@
 <div class="card-footer">
 <div><small data-tooltip='60%'><b>3</b> events passed</small></div>
 <div>
-<small data-tooltip='40%'><b>2</b> events failed,
-<b data-tooltip='%'>0</b> others
+<small data-tooltip='20%'><b>1</b> events failed,
+<b data-tooltip='%'>1</b> others
 </small>
 </div>
 </div>
@@ -142,7 +142,7 @@
 </div></div>
 <script>
 var timeline = {
-"Tests.TC01_testSuccessLogin":4.912,"Tests.TC02_testAddToCart":44.121,"Tests.TC03_testRemoveItem":6.208,"Tests.TC04_testOnlineShopping":45.616,"Tests.TC05_testInValidLogin":1.334
+"Tests.TC01_testSuccessLogin":1.322,"Tests.TC02_testAddToCart":3.573,"Tests.TC03_testRemoveItem":2.353,"Tests.TC04_testOnlineShopping":40.39,"Tests.TC05_testInValidLogin":0.003
 };
 </script>
 <div class="row">
@@ -152,9 +152,9 @@ var timeline = {
 var statusGroup = {
 parentCount: 5,
 passParent: 3,
-failParent: 2,
+failParent: 1,
 warningParent: 0,
-skipParent: 0,
+skipParent: 1,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -169,9 +169,9 @@ skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 passEvents: 3,
-failEvents: 2,
+failEvents: 1,
 warningEvents: 0,
-skipEvents: 0,
+skipEvents: 1,
 infoEvents: 0
 };
 </script><div class="test-wrapper row view test-view">
@@ -186,6 +186,7 @@ infoEvents: 0
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -200,7 +201,7 @@ infoEvents: 0
           <div class="test-detail">
             <p class="name">Tests.TC01_testSuccessLogin</p>
             <p class="text-sm">
-              <span>6:32:42 PM</span> / <span>00:00:04:912</span>
+              <span>7:49:13 PM</span> / <span>00:00:01:322</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -209,9 +210,9 @@ infoEvents: 0
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Tests.TC01_testSuccessLogin</h5>
-<span class='badge badge-success'>01.02.2023 6:32:42 PM</span>
-<span class='badge badge-danger'>01.02.2023 6:32:47 PM</span>
-<span class='badge badge-default'>00:00:04:912</span>
+<span class='badge badge-success'>01.02.2023 7:49:13 PM</span>
+<span class='badge badge-danger'>01.02.2023 7:49:14 PM</span>
+<span class='badge badge-default'>00:00:01:322</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -223,7 +224,7 @@ infoEvents: 0
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:32:47 PM</td>
+        <td>7:49:14 PM</td>
         <td>
           Test Passed.
         </td>
@@ -233,25 +234,25 @@ infoEvents: 0
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="2"
+        <li class="test-item"  status="pass" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Tests.TC02_testAddToCart</p>
             <p class="text-sm">
-              <span>6:33:32 PM</span> / <span>00:00:44:121</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>7:49:29 PM</span> / <span>00:00:03:573</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Tests.TC02_testAddToCart</h5>
-<span class='badge badge-success'>01.02.2023 6:33:32 PM</span>
-<span class='badge badge-danger'>01.02.2023 6:34:16 PM</span>
-<span class='badge badge-default'>00:00:44:121</span>
+<h5 class="test-status text-pass">Tests.TC02_testAddToCart</h5>
+<span class='badge badge-success'>01.02.2023 7:49:29 PM</span>
+<span class='badge badge-danger'>01.02.2023 7:49:32 PM</span>
+<span class='badge badge-default'>00:00:03:573</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -262,63 +263,10 @@ infoEvents: 0
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:34:16 PM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:49:32 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [c4658ed3-ee99-4eda-9834-1ac3c79ba4f8, findElement {using=xpath, value=//android.view.ViewGroup[@content-desc="test-Description"]/android.widget.TextView[1]}]
-Capabilities {appium:app: C:\Users\FawzyN\IdeaProject..., appium:appPackage: com.swaglabsmobileapp, appium:appWaitActivity: com.swaglabsmobileapp.MainA..., appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\FawzyN\IdeaProject..., appWaitActivity: com.swaglabsmobileapp.MainA..., automationName: UiAutomator2, deviceName: Demo, platformName: android, platformVersion: 11}, appium:deviceApiLevel: 30, appium:deviceManufacturer: unknown, appium:deviceModel: Android SDK built for x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 400, appium:deviceScreenSize: 1080x2160, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.5, appium:platformVersion: 11, appium:statBarHeight: 60, appium:takesScreenshot: true, appium:viewportRect: {height: 1980, left: 0, top: 60, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: c4658ed3-ee99-4eda-9834-1ac3c79ba4f8
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at pages.CartPage.getproductName(CartPage.java:35)
-	at Tests.TC02_testAddToCart(Tests.java:97)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-</textarea>
-          
+          Test Passed.
         </td>
       </tr>
   </tbody>
@@ -333,7 +281,7 @@ Session ID: c4658ed3-ee99-4eda-9834-1ac3c79ba4f8
           <div class="test-detail">
             <p class="name">Tests.TC03_testRemoveItem</p>
             <p class="text-sm">
-              <span>6:34:47 PM</span> / <span>00:00:06:208</span>
+              <span>7:49:46 PM</span> / <span>00:00:02:353</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -342,9 +290,9 @@ Session ID: c4658ed3-ee99-4eda-9834-1ac3c79ba4f8
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Tests.TC03_testRemoveItem</h5>
-<span class='badge badge-success'>01.02.2023 6:34:47 PM</span>
-<span class='badge badge-danger'>01.02.2023 6:34:54 PM</span>
-<span class='badge badge-default'>00:00:06:208</span>
+<span class='badge badge-success'>01.02.2023 7:49:46 PM</span>
+<span class='badge badge-danger'>01.02.2023 7:49:48 PM</span>
+<span class='badge badge-default'>00:00:02:353</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -356,7 +304,7 @@ Session ID: c4658ed3-ee99-4eda-9834-1ac3c79ba4f8
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:34:54 PM</td>
+        <td>7:49:48 PM</td>
         <td>
           Test Passed.
         </td>
@@ -373,7 +321,7 @@ Session ID: c4658ed3-ee99-4eda-9834-1ac3c79ba4f8
           <div class="test-detail">
             <p class="name">Tests.TC04_testOnlineShopping</p>
             <p class="text-sm">
-              <span>6:35:33 PM</span> / <span>00:00:45:616</span>
+              <span>7:50:05 PM</span> / <span>00:00:40:390</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -382,9 +330,9 @@ Session ID: c4658ed3-ee99-4eda-9834-1ac3c79ba4f8
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Tests.TC04_testOnlineShopping</h5>
-<span class='badge badge-success'>01.02.2023 6:35:33 PM</span>
-<span class='badge badge-danger'>01.02.2023 6:36:18 PM</span>
-<span class='badge badge-default'>00:00:45:616</span>
+<span class='badge badge-success'>01.02.2023 7:50:05 PM</span>
+<span class='badge badge-danger'>01.02.2023 7:50:45 PM</span>
+<span class='badge badge-default'>00:00:40:390</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -396,16 +344,16 @@ Session ID: c4658ed3-ee99-4eda-9834-1ac3c79ba4f8
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>6:36:18 PM</td>
+        <td>7:50:45 PM</td>
         <td>
           <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [d2a9d42c-7d82-4078-80de-f6ed6f05930e, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textMatches("FINISH").instance(0))}]
+Command: [69ee24e4-bbb2-4ecb-9165-364638676ca8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textMatches("FINISH").instance(0))}]
 Capabilities {appium:app: C:\Users\FawzyN\IdeaProject..., appium:appPackage: com.swaglabsmobileapp, appium:appWaitActivity: com.swaglabsmobileapp.MainA..., appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\FawzyN\IdeaProject..., appWaitActivity: com.swaglabsmobileapp.MainA..., automationName: UiAutomator2, deviceName: Demo, platformName: android, platformVersion: 11}, appium:deviceApiLevel: 30, appium:deviceManufacturer: unknown, appium:deviceModel: Android SDK built for x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 400, appium:deviceScreenSize: 1080x2160, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.5, appium:platformVersion: 11, appium:statBarHeight: 60, appium:takesScreenshot: true, appium:viewportRect: {height: 1980, left: 0, top: 60, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: d2a9d42c-7d82-4078-80de-f6ed6f05930e
+Session ID: 69ee24e4-bbb2-4ecb-9165-364638676ca8
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -423,7 +371,7 @@ Session ID: d2a9d42c-7d82-4078-80de-f6ed6f05930e
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
 	at Actions.MobileActions.scrollDownToSpecificText(MobileActions.java:26)
 	at pages.OverViewPage.ScrollDownToFinishBtn(OverViewPage.java:37)
-	at Tests.TC04_testOnlineShopping(Tests.java:123)
+	at Tests.TC04_testOnlineShopping(Tests.java:130)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -460,25 +408,25 @@ Session ID: d2a9d42c-7d82-4078-80de-f6ed6f05930e
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="5"
+        <li class="test-item"  status="skip" test-id="5"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Tests.TC05_testInValidLogin</p>
             <p class="text-sm">
-              <span>6:36:51 PM</span> / <span>00:00:01:334</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>7:51:17 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Tests.TC05_testInValidLogin</h5>
-<span class='badge badge-success'>01.02.2023 6:36:51 PM</span>
-<span class='badge badge-danger'>01.02.2023 6:36:52 PM</span>
-<span class='badge badge-default'>00:00:01:334</span>
+<h5 class="test-status text-skip">Tests.TC05_testInValidLogin</h5>
+<span class='badge badge-success'>01.02.2023 7:51:17 PM</span>
+<span class='badge badge-danger'>01.02.2023 7:51:17 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -489,10 +437,67 @@ Session ID: d2a9d42c-7d82-4078-80de-f6ed6f05930e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:36:52 PM</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>7:51:17 PM</td>
         <td>
-          Test Passed.
+          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e01cabcc-5d7f-440b-8aa9-5340f028362d, findElement {using=accessibility id, value=test-Username}]
+Capabilities {appium:app: C:\Users\FawzyN\IdeaProject..., appium:appPackage: com.swaglabsmobileapp, appium:appWaitActivity: com.swaglabsmobileapp.MainA..., appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\FawzyN\IdeaProject..., appWaitActivity: com.swaglabsmobileapp.MainA..., automationName: UiAutomator2, deviceName: Demo, platformName: android, platformVersion: 11}, appium:deviceApiLevel: 30, appium:deviceManufacturer: unknown, appium:deviceModel: Android SDK built for x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 400, appium:deviceScreenSize: 1080x2160, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.5, appium:platformVersion: 11, appium:statBarHeight: 60, appium:takesScreenshot: true, appium:viewportRect: {height: 1980, left: 0, top: 60, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: e01cabcc-5d7f-440b-8aa9-5340f028362d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at pages.HomePage.setUserName(HomePage.java:24)
+	at Tests.wrong_userSetupDevice(Tests.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -520,7 +525,8 @@ Session ID: d2a9d42c-7d82-4078-80de-f6ed6f05930e
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>2</span>
+<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-skip'>1</span>
 </span>
 <p class="name">org.openqa.selenium.NoSuchElementException</p>
 <p class="duration text-sm">2 tests</p>
@@ -528,7 +534,8 @@ Session ID: d2a9d42c-7d82-4078-80de-f6ed6f05930e
 <div class="test-contents d-none">
 <div class="info">
 <h4>org.openqa.selenium.NoSuchElementException</h4>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+<span status="skip" class='badge log badge-skip'>1 skipped</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -541,16 +548,16 @@ Session ID: d2a9d42c-7d82-4078-80de-f6ed6f05930e
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>18:33:32 PM</td>
-<td>
-<a href="#" class="linked" test-id='2' id='2'>Tests.TC02_testAddToCart</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:35:33 PM</td>
+<td>19:50:05 PM</td>
 <td>
 <a href="#" class="linked" test-id='4' id='4'>Tests.TC04_testOnlineShopping</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>19:51:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>Tests.TC05_testInValidLogin</a>
 </td>
 </tr>
 </tbody>
