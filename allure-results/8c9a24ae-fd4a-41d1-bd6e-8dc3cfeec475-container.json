@@ -1,1 +1,0 @@
-{"uuid":"8c9a24ae-fd4a-41d1-bd6e-8dc3cfeec475","name":"Tests.setupDevice","children":["ec945bcb-5e4d-4070-b54f-946457668cf2"],"description":"","befores":[{"name":"setupDevice","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1672681737184,"stop":1672681749669}],"afters":[],"start":1672681737184,"stop":1672681749670}

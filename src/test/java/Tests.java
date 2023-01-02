@@ -86,7 +86,7 @@ public class Tests {
 
     @Test(groups = "standard_user")
     //testing successfully login.
-    public void TC01_testSuccessLogin()
+    public void TC04_testSuccessLogin()
     {
         homePage.Wait();
         Assert.assertEquals("PRODUCTS",productPage.getProductText());
@@ -121,7 +121,7 @@ public class Tests {
     }
     @Test(groups = "standard_user")
     //test ordering online and assertion by  the final text.
-    public void TC04_testOnlineShopping(){
+    public void TC01_testOnlineShopping(){
 
         String productPrice =productPage.clickAddToCart().clickCartPageBtn()
              .clickCheckOutBtn().setFirstName(FirstName).setLastName(LastName)
