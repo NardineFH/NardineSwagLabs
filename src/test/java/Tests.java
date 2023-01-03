@@ -113,7 +113,7 @@ public class Tests {
      public void TC03_testRemoveItem(){
         productPage.clickAddToCart().clickRemoveBtn().clickCartPage_Btn();
         //validation product is removed using boolean method.
-         Assert.assertTrue(cartPage.checkEmptyCart());
+          Assert.assertTrue(cartPage.checkEmptyCart());
         }
         @Test(groups = "standard_user")
         //validating the product is removed successfully by returning to product page and asserting on the button ,it the product was removed
