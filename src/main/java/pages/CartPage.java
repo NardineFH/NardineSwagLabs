@@ -15,9 +15,13 @@ public class CartPage {
         }
     private By productPrice = new By.ByXPath("//android.view.ViewGroup[@content-desc=\"test-Price\"]/android.widget.TextView");
     private By productName = new By.ByXPath("//android.view.ViewGroup[@content-desc=\"test-Description\"]/android.widget.TextView[1]");
+   // private By removeBtn = AppiumBy.accessibilityId("test-REMOVE");
+    private By removeText = new By.ByXPath("//android.view.ViewGroup[@content-desc=\"test-REMOVE\"]/android.widget.TextView");
     private By removeBtn = AppiumBy.accessibilityId("test-REMOVE");
 
     private By ContinueShoppingBtn = new By.ByXPath("//android.view.ViewGroup[@content-desc=\"test-CONTINUE SHOPPING\"]");
+
+
     private By CartItemBtn_NotEmpty = new By.ByXPath("//android.view.ViewGroup[@content-desc=\"test-Cart\"]/android.view.ViewGroup/android.widget.TextView");
 
 
@@ -45,28 +49,17 @@ public class CartPage {
         driver.findElement(ContinueShoppingBtn).click();
         return new ProductPage(driver);
     }
-    public String getItems  ()
 
-    {  String items;
-        try {
-            items = driver.findElement(removeBtn).getAttribute("exist");
-        } catch (Exception e){
-
-            items = "Empty";
-
-        }
-          return  items;
-    }
-    public String checkEmptyCart()
+    public Boolean checkEmptyCart()
     {   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        String items ;
+        Boolean items ;
 
         try {
-            driver.findElement(removeBtn).click();
-            items = "exists";
+            driver.findElement(removeText);
+            items = Boolean.TRUE;
         } catch (Exception e){
 
-            items = "does not exist in DOM anymore";
+            items = Boolean.FALSE;
 
         }
 
@@ -86,8 +79,8 @@ public class CartPage {
         //validating the product is removed successfully using boolean method.
         try {
             driver.findElement(CartItemBtn_NotEmpty);
-            return false;
-        } catch (NoSuchElementException e) {
             return true;
+        } catch (Exception e) {
+            return false;
         }
     }}

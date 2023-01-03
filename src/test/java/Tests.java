@@ -110,13 +110,18 @@ public class Tests {
     }
     @Test(groups = "standard_user")
     //this assertion validate if the product is successfully removed,by using the locator of the empty text in the cart button(using try/catch method).
-    // 1= the text attribute of the cart when it is not empty.
      public void TC03_testRemoveItem(){
-        productPage.clickAddToCart()
-                .clickCartPageBtn().Wait().clickRemoveBtn();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        productPage.clickAddToCart().clickRemoveBtn().clickCartPage_Btn();
         //validation product is removed using boolean method.
-        Assert.assertFalse(cartPage.validateRemovingProduct());
+         Assert.assertTrue(cartPage.checkEmptyCart());
+        }
+        @Test(groups = "standard_user")
+        //validating the product is removed successfully by returning to product page and asserting on the button ,it the product was removed
+                // "Add to cart " text should appear on it's button instead of "Remove
+        public void TC06_testRemoveItem2(){
+            productPage.clickAddToCart().clickCartPage_Btn().clickRemoveBtn().clickContinueShoppingBtn();
+        Assert.assertEquals(productPage.getAddToCartText(), "ADD TO CART");
+
 
     }
     @Test(groups = "standard_user")
@@ -127,7 +132,6 @@ public class Tests {
              .clickCheckOutBtn().setFirstName(FirstName).setLastName(LastName)
              .setzipcode(ZipCode).clickContinueBtn().getproductPrice();
         Assert.assertEquals(productPrice,"$29.99");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         String finishText = overViewPage.ScrollDownToFinishBtn().clickFinishBtn().getFinishedOrderText();
         Assert.assertEquals(finishText,"THANK YOU FOR YOU ORDER" );
 
